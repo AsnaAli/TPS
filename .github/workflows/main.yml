@@ -17,6 +17,11 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
       
+      - name: Install Surge 
+        run: npm install -g surge 
+        
+      - name: Deploy web
+        run surge./absorbed-quarter.surge.sh/ --token $$
       
 
      
