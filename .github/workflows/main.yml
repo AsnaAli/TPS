@@ -20,7 +20,8 @@ jobs:
         run: npm install -g surge 
         
       - name: Deploy web
-        run surge./ https://absorbed-quarter.surge.sh/ --token ${{secrets.SURGE_SECRET}}
+      - run: surge ./ absorbed-quarter.surge.sh --token ${{ secrets.SURGE_SECRET }}
+ 
         
       
 
